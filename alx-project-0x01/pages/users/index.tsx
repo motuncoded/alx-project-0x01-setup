@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from "@/components/layout/Header";
 
-function index() {
+const Users: React.FC = () => {
   return (
-    <div>index</div>
+    <div><Header/></div>
   )
 }
 
-export default index
+export default Users

@@ -1,9 +1,10 @@
+import Header from '@/components/layout/Header'
 import React from 'react'
 
-function index() {
+const Posts: React.FC = () => {
   return (
-    <div>index</div>
+    <div><Header/></div>
   )
 }
 
-export default index
+export default Posts

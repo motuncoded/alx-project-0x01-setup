@@ -1,13 +1,9 @@
 import React from 'react'
 import Header from "@/components/layout/Header";
-import { PostProps } from "@/interfaces";
+import { PostProps, UserProps } from "@/interfaces";
 import UserCard from "@/components/common/UserCard";
 
-interface PostsPageProps {
-  posts: PostProps[];
-}
-
-const Users: React.FC<PostsPageProps> = ({ posts }) => {
+const Users: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
@@ -18,13 +14,10 @@ const Users: React.FC<PostsPageProps> = ({ posts }) => {
             Add User
           </button>
         </div>
-        {posts.map(({ title, body, userId, id }: PostProps, key: number) => (
+        {posts.map((post) => (
           <UserCard
-            title={title}
-            body={body}
-            userId={userId}
-            id={id}
-            key={key}
+            key={post.id}
+            {...post}
           />
         ))}
       </main>

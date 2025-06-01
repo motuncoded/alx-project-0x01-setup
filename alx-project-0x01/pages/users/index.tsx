@@ -18,7 +18,7 @@ const Users: React.FC<PostsPageProps> = ({ posts }) => {
             Add User
           </button>
         </div>
-        {posts?.map(({ title, body, userId, id }: PostProps, key: number) => (
+        {posts.map(({ title, body, userId, id }: PostProps, key: number) => (
           <PostCard
             title={title}
             body={body}

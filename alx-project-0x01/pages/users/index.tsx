@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from "@/components/layout/Header";
 import { PostProps } from "@/interfaces";
-import PostCard from "@/components/common/PostCard";
+import UserCard from "@/components/common/UserCard";
 
 interface PostsPageProps {
   posts: PostProps[];
@@ -19,7 +19,7 @@ const Users: React.FC<PostsPageProps> = ({ posts }) => {
           </button>
         </div>
         {posts.map(({ title, body, userId, id }: PostProps, key: number) => (
-          <PostCard
+          <UserCard
             title={title}
             body={body}
             userId={userId}
